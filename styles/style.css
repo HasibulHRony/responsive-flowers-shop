@@ -27,7 +27,8 @@
 
 /* shared styles */
 header,
-main {
+main,
+footer {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -204,6 +205,7 @@ h1 {
 
 #deal-1 {
     background-image: url("../assets/deal-bloom.png");
+    background-size: cover;
     font-size: 20px;
     font-weight: 700;
     display: flex;
@@ -219,6 +221,7 @@ h1 {
 }
 
 #deal-2 {
+    background-size: cover;
     background-image: url("../assets/deal-ana.png");
     font-size: 20px;
     font-weight: 700;
@@ -271,6 +274,7 @@ h1 {
     background-size: cover;
     filter: brightness(90%);
     margin: 0 auto;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,6 +310,53 @@ h1 {
     display: inline;
 }
 
+
+/* footer section styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-logo,
+.home,
+.features,
+.icons {
+    max-width: 25%;
+}
+
+.home>ul,
+.features>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.home>ul>li,
+.features>ul>li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.home>ul>li>a,
+.features>ul>li>a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.foot-logo>figure {
+    margin-bottom: 1rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons>figure>img {
+    margin-left: 1rem;
+}
 
 /* mobile responsive */
 @media screen and (max-width: 576px) {
@@ -433,9 +484,26 @@ h1 {
     }
 
     /* join section */
+    #join {
+        margin-bottom: 1rem;
+    }
 
-    
-    #email{
+    #email {
         width: 200px;
+    }
+
+    /* footer section styles */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1.5rem;
+    }
+
+    .foot-logo,
+    .home,
+    .features,
+    .icons {
+        max-width: 80%;
+        margin-bottom: 1rem;
     }
 }
