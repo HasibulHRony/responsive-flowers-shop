@@ -39,7 +39,7 @@ main {
 }
 
 .dark-h {
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
 
 h2 {
@@ -137,6 +137,55 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+    margin-bottom: 12rem;
+}
+
+/* plants lovers comment section */
+.planet-lovers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.lovers-image,
+.lovers-comments {
+    max-width: 47%;
+}
+
+.lovers-comments>ul {
+    padding-left: 1.75rem;
+}
+
+.lovers-comments>ul>li {
+    margin-bottom: 1rem;
+}
+
+.comments-heading {
+    font-size: 64px;
+    margin: 2rem 0;
+}
+
+
+.lovers-image {
+    position: relative;
+}
+
+.gradient-fig {
+    background: linear-gradient(180.00deg, rgba(103, 171, 234, 0.24), rgba(233, 90, 8, 0.6) 100%);
+}
+
+/* batch logo */
+#batch-figure {
+    max-width: 200px;
+    max-height: 200px;
+    position: absolute;
+    right: -85px;
+    top: -80px;
+}
+
+#batch-image {
+    width: 100%;
+    height: 100%;
 }
 
 /* mobile responsive */
@@ -146,7 +195,8 @@ h1 {
     nav,
     .banner figure,
     .banner-description,
-    .our-plants {
+    .our-plants,
+    .planet-lovers {
         max-width: 95vw;
         margin: 2rem auto;
     }
@@ -188,14 +238,42 @@ h1 {
     .plants-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
+        margin-bottom: 2rem;
     }
 
     .plant>figure {
         max-width: 47vw;
     }
 
-    .plant>figure>img {
-        max-width: 95%;
+    .plant>figure>img,
+    .gradient-image {
+        width: 100%;
     }
 
+    /* planet-lovers section */
+    .planet-lovers {
+        flex-direction: column;
+    }
+
+    .comments-heading {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .gradient-fig{
+        width: 95vw;
+    }
+
+    /* batch figure */
+    #batch-figure {
+        display: none;
+    }
+
+    .lovers-comments{
+        max-width: 95vw;
+    }
+
+    .lovers-comments>ul {
+        padding-left: 1rem;
+    }
 }
