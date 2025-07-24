@@ -456,6 +456,8 @@ footer {
 
     .deal-description>p {
         text-align: center;
+        max-width: 95%;
+        margin: 0 auto;
     }
 
     .first-2 {
