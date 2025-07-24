@@ -1,18 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 .inter-fonts {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .noto-serif-fonts {
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+
+/* shared styles */
+header,
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.dark-p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.dark-h {
+    color: rgb(0, 0, 0)
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.font-highlight {
+    color: rgb(233, 90, 8);
+}
+
+.btn-1 {
+    color: white;
+    background-color: rgb(233, 90, 8);
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* navbar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+nav>div {
+    display: flex;
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+}
+
+nav>ul>li {
+    list-style: none;
+    margin-left: 2.5rem;
+}
+
+
+nav>ul>li>a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* banner styles */
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.banner {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+
+.banner figure img {
+    border: 1px dashed gray;
+}
+
+/* our plants section */
+
+.our-plants {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.plant-description>p {
+    margin-bottom: 1.75rem;
+}
+
+.plant-details {
+    margin: 1rem 0;
+}
+
+.plant-details>p,
+.plant-details>h3 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.plants-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 576px) {
+
+    /* shared styles */
+    nav,
+    .banner figure,
+    .banner-description,
+    .our-plants {
+        max-width: 95vw;
+        margin: 2rem auto;
+    }
+
+    .btn-1 {
+        color: white;
+        background-color: rgb(233, 90, 8);
+        border: none;
+        padding: 1rem 0;
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* navbar responsive */
+    nav>ul>li {
+        display: none;
+    }
+
+    nav>ul>li:nth-child(4) {
+        display: contents;
+    }
+
+    /* banner responsiveness */
+    .banner {
+        flex-direction: column-reverse;
+        margin-bottom: 3rem;
+    }
+
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .banner figure img {
+        width: 100%;
+    }
+
+    /* our plants section */
+    .plants-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .plant>figure {
+        max-width: 47vw;
+    }
+
+    .plant>figure>img {
+        max-width: 95%;
+    }
+
 }
